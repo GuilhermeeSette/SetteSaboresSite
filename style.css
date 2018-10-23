@@ -1,0 +1,55 @@
+.header{
+	position: sticky;
+	top:0;
+	font-family: "Courier new";
+	background-color: #ffecb3;
+}
+
+.nav{
+	margin-top: 0px;
+	padding: 3%;
+}
+
+.nav img{
+	position: relative;
+	overflow: auto;
+	height: 130px;
+	float: left;
+	margin-bottom: 20px;
+}
+
+.contact a{
+	font-family: "Courier new";
+	list-style-type: none;
+	text-decoration: none;
+	list-style: none;
+	color: black;
+}
+
+.nav-items{
+	margin-left: 25%;
+	padding-top: 2%;
+}
+
+.nav-item{
+	padding: 20px;
+	padding-bottom: 0px;
+	display: inline-block;
+}
+
+.nav-item a{
+	list-style-type: none;
+	text-decoration: none;
+	list-style: none;
+	color: black;
+}
+
+.nav-item:hover{
+	border-radius: 4px;
+	border-bottom: 2px solid #f8bbd0;
+}
+
+.contact{
+	float: right;
+	
+}
