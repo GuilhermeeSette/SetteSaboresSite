@@ -116,6 +116,7 @@ hr{
 	width: 27%;
 	border-radius: 4px;
 	padding-bottom: 2%;
+	
 }
 
 .text{
@@ -127,6 +128,7 @@ hr{
 
 .gallery-item img:hover{
 	opacity: 0.5;
+
 	
 }
 
