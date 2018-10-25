@@ -1,3 +1,7 @@
+*{
+	font-family: "Courier New", Arial, Verdana;
+}
+
 html, body{
 	height: 100%;
 	width: 99.8%;

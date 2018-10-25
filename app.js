@@ -17,10 +17,10 @@ var marker = new google.maps.Marker({
 
 $(document).ready(function(){
 
-		$(".bolos").show(1000);
-		$(".doces").hide(1000);
-		$(".ovos").hide(1000);
-		$(".panetones").hide(1000);
+		$(".bolos").show(0);
+		$(".doces").hide(0);
+		$(".ovos").hide(0);
+		$(".panetones").hide(0);
 	
 	$("#bolo").click(function(){
 		$(".bolos").show(1000);
