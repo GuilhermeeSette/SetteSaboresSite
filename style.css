@@ -4,16 +4,16 @@
 	font-family: "Courier new";
 	background-image: url("./imgs/wallpaper.jpg");
 	background-repeat: no-repeat;
-	
 	padding: 2%;
 	border-radius: 3px;
+    height: 100%;
 }
 
 .nav{
 
 	margin-top: 0px;
 	padding: ;
-	height: 70%;
+	
 	margin:0px;
 	margin-bottom: 0px;
 	padding-top:37%;
@@ -67,7 +67,31 @@
 	
 }
 
+.buttons{
+    padding-bottom: 4%;
+    text-align: center;
+    margin-right: 8%;
+}
+
+.button-item{
+    padding: 20px;
+	position: relative;
+	margin-top: 0px;
+	border: 2px solid #e0f7fa;
+	display: inline-block;
+	background-color: #e0f7fa;
+    color: #f06292;
+    border-radius: 5px;
+}
+
+.button-item:hover{
+    background-color: #4bacb8;
+    border: 2px solid #4bacb8;
+}
+
 .about{
+    
+    line-height: 1.8;
 	text-align: justify;
 	border-radius: 10px;
 	background-color: #e0f7fa;
@@ -120,10 +144,14 @@ hr{
 }
 
 .text{
-	display: block;
+	visibility: hidden;
 	position: absolute;
-	top:190%;
-	left: 48%;
+	top:-170%;
+	left: 45%;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 50%;
+    border: 1px solid black;
 }
 
 .gallery-item img:hover{
@@ -132,8 +160,10 @@ hr{
 	
 }
 
-.gallery-item img:hover .text{
-	display: block;
+.gallery-item:hover .text{
+    visibility: visible;
+    opacity: 0.8;
+	
 	
 }
 
@@ -150,4 +180,10 @@ hr{
 	text-align: center;
 	padding-top: 4%;
 	margin-bottom: 4%;
+}
+
+.services{
+    border-radius: 10px;
+	background-color: #e0f7fa;
+    padding: 5%;
 }
