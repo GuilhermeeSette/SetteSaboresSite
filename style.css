@@ -3,7 +3,12 @@ html, body{
 	width: 99.8%;
 }
 
+html{
+	scroll-behavior: smooth;
+}
+
 .header{
+
 	position: relative;
 	
 	font-family: "Courier new";
