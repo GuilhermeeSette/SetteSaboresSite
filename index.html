@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 	<title>Sette Sabores</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="./style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="./app.js"></script>
+
 </head>
 <body>
-	<div class="header">
+	<div class="header" id="header">
 		<div class="nav">
 			<img src="./imgs/logo_teste.jpg">
 			<ul class="nav-items">
@@ -15,9 +19,7 @@
 				<li class="nav-item"><a href="#services" >Serviços</a></li>
 				<li class="nav-item"><a href="#comments" >Comentários</a></li>
 			</ul>
-			<div class="contact">
-				<a href="tel: 11968794223">(11) 96879-4223</a>
-			</div>
+			
 		</div>
 		
 	</div>
@@ -47,69 +49,162 @@
 
 		<div class="gallery" id="gallery">
 			<h2> Conheça nossos produtos</h2>
-            
             <div class="buttons">
-            <button class="button-item">Bolos</button>
-            <button class="button-item">Doces</button>
-            <button class="button-item">Ovos</button>
-            <button class="button-item">Panetones</button>
+            <button id="bolo" class="button-item">Bolos</button>
+            <button id="doce" class="button-item">Doces</button>
+            <button id="ovos" class="button-item">Ovos</button>
+            <button id="panetone" class="button-item">Panetones</button>
         </div>
-				
+        <div class="bolos">
 			<div class="gallery-item">
 				<img src="./imgs/doces.jpeg">
-				<div class="text"><p>bolo</p></div>
 			</div>
-
 			<div class="gallery-item">
-				<img src="./imgs/doces.jpeg">
-				<div class="text"><p>bolo</p></div>
+				<img clas = "image-item" src="./imgs/doces.jpeg">
 			</div>
 			<div class="gallery-item">
 				<img src="./imgs/doces.jpeg">
-				<div class="text"><p>bolo</p></div>
 			</div>
 			<div class="gallery-item">
 				<img src="./imgs/doces.jpeg">
-				<div class="text"><p>bolo</p></div>
 			</div>
 			<div class="gallery-item">
 				<img src="./imgs/doces.jpeg">
-				<div class="text"><p>bolo</p></div>
 			</div>
 			<div class="gallery-item">
 				<img src="./imgs/doces.jpeg">
-				<div class="text"><p>bolo</p></div>
 			</div>
 			<div class="gallery-item">
 				<img src="./imgs/doces.jpeg">
-				<div class="text"><p>bolo</p></div>
 			</div>
 			<div class="gallery-item">
 				<img src="./imgs/doces.jpeg">
-				<div class="text"><p>bolo</p></div>
 			</div>
 			<div class="gallery-item">
 				<img src="./imgs/doces.jpeg">
-				<div class="text"><p>bolo</p></div>
 			</div>
-			
-			
+		</div>	
+		<div class="doces">
+			<div class="gallery-item">
+				<img src="./imgs/doces2.jpeg">
+			</div>
+			<div class="gallery-item">
+				<img clas = "image-item" src="./imgs/doces2.jpeg">
+			</div>
+			<div class="gallery-item">
+				<img src="./imgs/doces2.jpeg">
+			</div>
+			<div class="gallery-item">
+				<img src="./imgs/doces2.jpeg">
+			</div>
+			<div class="gallery-item">
+				<img src="./imgs/doces2.jpeg">
+			</div>
+			<div class="gallery-item">
+				<img src="./imgs/doces2.jpeg">
+			</div>
+			<div class="gallery-item">
+				<img src="./imgs/doces2.jpeg">
+			</div>
+			<div class="gallery-item">
+				<img src="./imgs/doces2.jpeg">
+			</div>
+			<div class="gallery-item">
+				<img src="./imgs/doces2.jpeg">
+			</div>
+		</div>
+		<div class="ovos">
+			<div class="gallery-item">
+				<img src="./imgs/doces2.jpeg">
+			</div>
+			<div class="gallery-item">
+				<img clas = "image-item" src="./imgs/doces2.jpeg">
+			</div>
+			<div class="gallery-item">
+				<img src="./imgs/doces2.jpeg">
+			</div>
+			<div class="gallery-item">
+				<img src="./imgs/doces2.jpeg">
+			</div>
+			<div class="gallery-item">
+				<img src="./imgs/doces2.jpeg">
+			</div>
+			<div class="gallery-item">
+				<img src="./imgs/doces2.jpeg">
+			</div>
+			<div class="gallery-item">
+				<img src="./imgs/doces2.jpeg">
+			</div>
+			<div class="gallery-item">
+				<img src="./imgs/doces2.jpeg">
+			</div>
+			<div class="gallery-item">
+				<img src="./imgs/doces2.jpeg">
+			</div>
+		</div>
+		<div class="panetones">
+			<div class="gallery-item">
+				<img src="./imgs/doces2.jpeg">
+			</div>
+			<div class="gallery-item">
+				<img clas = "image-item" src="./imgs/doces2.jpeg">
+			</div>
+			<div class="gallery-item">
+				<img src="./imgs/doces2.jpeg">
+			</div>
+			<div class="gallery-item">
+				<img src="./imgs/doces2.jpeg">
+			</div>
+			<div class="gallery-item">
+				<img src="./imgs/doces2.jpeg">
+			</div>
+			<div class="gallery-item">
+				<img src="./imgs/doces2.jpeg">
+			</div>
+			<div class="gallery-item">
+				<img src="./imgs/doces2.jpeg">
+			</div>
+			<div class="gallery-item">
+				<img src="./imgs/doces2.jpeg">
+			</div>
+			<div class="gallery-item">
+				<img src="./imgs/doces2.jpeg">
+			</div>
+		</div>
 		</div>
 		<div class="services" id="services">
-			Teste
-		</div>
-		<div class="comments" id="comments">
-			
-		</div>
-	</div>
-	<div class="footer">
-		<div class="social-media">
-			
+			<i class="fas fa-truck truck">Realizamos entregas</i>
+			<i class="fas fa-edit">Pedidos por encomenda</i>
+			<i class="fas fa-credit-card">Todas formas de pagamento</i>
 		</div>
 		<div class="address">
-			
+			<div id="googleMap"></div>
+			<div class="social-media">
+				<ul class="social-media-items">
+					<li>
+						<a href="tel: 1146231890"><i class="fas fa-phone icon link-icon">(11) 4623-1890</i></a>
+					</li>
+					<li>
+						<a href=""><i class="fas fa-envelope icon link-icon">settesabores@gmail.com</i></a>
+					</li>
+					<li>
+						<a href="https://www.facebook.com/Settesabores/"><i class="fab fa-facebook-square icon link-icon">facebook.com/Settesabores/</i></a>
+					</li>
+					<li>
+						<a href="https://instagram.com/settesabores?utm_source=ig_profile_share&igshid=vkrr2vhfqq5o"><i class="fab fa-instagram icon link-icon">@settesabores</i></a>
+					</li>
+					<li>
+						<a href="tel: 11960904620"><i class="fab fa-whatsapp icon link-icon">(11) 96090-4620</i></a>
+					</li>
+				</ul>
+			</div>
 		</div>
-	</div>
 
+	</div>
+	<a class= "link-icon" href="#header"><i class="fas fa-chevron-circle-up"></i></a>
+	<div class="footer">
+		<p>Sette Sabores | © 2018 - Todos os direitos reservados - Desenvolvido por Sette Sabores</p>
+	</div>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMjGwFi8iC9uO6_7v1OrU7KxFfWl5RyzU&callback=myMap"></script>
 </body>
 </html>
