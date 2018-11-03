@@ -12,22 +12,18 @@ html{
 }
 
 .header{
-
 	position: relative;
-	
 	font-family: "Courier new";
 	background-image: url("./imgs/wallpaper.jpg");
 	background-repeat: no-repeat;
 	padding: 2%;
 	border-radius: 3px;
-    height: 70%;
+  height: 70%;
 }
 
 .nav{
-
 	margin-top: 0px;
 	padding: ;
-	
 	margin:0px;
 	margin-bottom: 0px;
 	padding-top:0%;
@@ -81,7 +77,6 @@ html{
 
 .contact{
 	float: right;
-	
 }
 
 .buttons{
@@ -91,14 +86,14 @@ html{
 }
 
 .button-item{
-    padding: 20px;
+  padding: 20px;
 	position: relative;
 	margin-top: 0px;
 	border: 2px solid #ffe57f;
 	display: inline-block;
 	background-color: #ffe57f;
-    color: #c85a54;
-    border-radius: 5px;
+  color: #c85a54;
+  border-radius: 5px;
 }
 
 .button-item:hover{
@@ -106,13 +101,10 @@ html{
 }
 
 .about{
-    
-    line-height: 1.8;
+  line-height: 1.8;
 	text-align: justify;
 	border-radius: 2px;
 	background-color: #ffe57f;
-	
-
 }
 
 .about h2{
@@ -123,7 +115,7 @@ html{
 	text-align: center;
 	padding-top: 4%;
 	margin-bottom: 4%;
-	
+
 }
 
 .about p{
@@ -135,7 +127,6 @@ html{
 }
 
 hr{
-
 	border-radius: 30%;
 	margin-left: 30%;
 	max-width: 100%;
@@ -148,15 +139,12 @@ hr{
 	width: 27%;
 	display: inline;
 	padding:2%;
-	
-
 }
 
 .gallery-item img{
 	width: 27%;
 	border-radius: 10%;
 	padding-bottom: 2%;
-	
 }
 
 .text{
@@ -164,26 +152,19 @@ hr{
 	position: absolute;
 	top:-170%;
 	left: 45%;
-   
-   
 }
 
 .gallery-item img:hover{
 	opacity: 0.5;
-
-	
 }
 
 .gallery-item:hover .text{
     visibility: visible;
     opacity: 0.8;
-	
-	
 }
 
 .gallery{
 	margin-left: 6%;
-	
 }
 
 .gallery h2{
@@ -198,41 +179,37 @@ hr{
 
 .services{
     border-radius: 2px;
-	background-color: #ffe57f;
-    padding: 5%;
+		background-color: #ffe57f;
+    padding: 2%;
     position: relative;
 }
 
+.icon-services{
+	margin-left: 7%;
+	position: relative;
+}
+
+.icon-services ul li{
+	padding: 2%;
+	display: inline-block;
+}
+
+.icon-services p{
+	font-size: 1.5em;
+}
+
 .fa-truck, .fa-edit, .fa-credit-card{
+	position: relative;
+	left: 45%;
 	font-size: 2em;
-	top: 42%;
-	
 }
 .icon{
 	font-size: 2em;
 	padding: 3px;
-
 }
 
 .icon:hover{
 	color:white;
-}
-.fa-truck{
-	
-	position: absolute;
-
-	left: 12%;
-}
-
-.fa-edit{
-
-	position: absolute;
-	left: 42%;
-}
-
-.fa-credit-card{
-	position: absolute;
-	left: 72%;
 }
 
 .address{
@@ -308,40 +285,111 @@ hr{
 
 	.nav-item{
 		padding: 10px;
+		padding-right: 25px;
+		width: 15%;
+	}
+
+	.nav-item a{
+		padding: 0px;
+		font-size:0.8em;
 	}
 
 	.nav-items{
 		top: 70%;
 		left: 0;
 	}
-	.fa-truck{
-		
-		position: absolute;
 
-		left: 6%;
-	}
 
-	.fa-edit{
-
-		position: absolute;
-		left: 36%;
-	}
-
-	.fa-credit-card{
-		position: absolute;
-		left: 70%;
-	}
-
-	.fa-truck, .fa-edit, .fa-credit-card{
-		
-		top: 40%;
-	
-	}
 	.fa-chevron-circle-up{
 		font-size: 2em;
 		bottom: 25px;
 		right: 25px;
 
+	}
+
+	.fa-truck, .fa-edit, .fa-credit-card{
+		left: 0%;
+		font-size: 2em;
+	}
+
+	.icon-services{
+		margin-left: 2%;
+	}
+	.services p{
+		font-size: 1em;
+	}
+
+	#googleMap, .social-media{
+		height: 200px;
+
+	}
+
+	#googleMap{
+		width: 100%;
+	}
+	.social-media{
+		font-size: 2em;
+		width: 100%;
+		margin: 0.2%;
+	}
+
+	.social-media-items li{
+		font-size: 0.8em;
+	}
+
+	.social-media-items{
+		position: absolute;
+		top:2%;
+		left: 5%;
+		list-style: none;
+		padding: 0.25%;
+		overflow:visible;
+	}
+
+	.social-media-items li{
+		padding: 0.4%;
+	}
+
+	.footer{
+		height: 20%;
+	}
+
+	.footer p{
+		font-size: 0.9em;
+	}
+
+	.about{
+	  line-height: 1.1;
+	}
+
+	.about h2{
+		margin-left: 30%;
+		margin-right: 30%;
+		border-radius:4px;
+		border-bottom:4px solid #c85a54;
+		text-align: center;
+		padding-top: 4%;
+		margin-bottom: 4%;
+		font-size: 1.5em;
+
+	}
+
+	.about p{
+		border-radius: 10px;
+		padding: 0.5%;
+		background-color:;
+		margin-left: 10%;
+		margin-right: 10%;
+		font-size: 0.9em;
+	}
+
+	hr{
+
+		border-radius: 30%;
+		margin-left: 5%;
+		max-width: 100%;
+		margin:1%;
+		border: 3px solid #ffcccb;
 	}
 
 
