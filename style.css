@@ -305,6 +305,11 @@ hr{
 		font-size: 0.7em;
 	}
 
+	.nav img{
+		top: 25%;
+		left: 25%;
+	}
+
 	.nav-item{
 		padding: 10px;
 		padding-right: 25px;
