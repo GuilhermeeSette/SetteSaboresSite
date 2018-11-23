@@ -116,13 +116,11 @@ img {
 }
 
 .logo{
-	position: absolute;
-	top:0;
-	left: 0;
-	overflow: auto;
-	height: 130px;
-	float: left;
+	height: 100%;
+
+
 	margin-bottom: 0px;
+
 }
 
 .contact a{
@@ -273,7 +271,7 @@ hr{
 }
 
 .icon-services{
-	margin-left: 17%;
+	margin-left:;
 	position: relative;
 }
 
@@ -286,9 +284,11 @@ hr{
 	font-size: 1.5em;
 }
 
+.nav-gallery{
+	display: none;
+}
 .fa-truck, .fa-edit, .fa-credit-card{
 	position: relative;
-	left: 45%;
 	font-size: 2em;
 }
 .icon{
@@ -340,10 +340,10 @@ hr{
 }
 
 .footer{
-	float: left;
-	top: 150%;
-	width: 100%;
-	height: 5%;
+
+
+
+
 	background-color: #FFCBAB;
 }
 
@@ -367,6 +367,38 @@ hr{
 @media screen and (max-width: 510px){
 	.gallery-item img{
 		width: 90%;
+	}
+
+	.carousel{
+	  height: 65%;
+	  margin-bottom:0px;
+	  position: relative;
+	}
+
+	.carousel-inner > .item > img {
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    min-width: 100%;
+	    height: 650px;
+	}
+
+	.carousel-inner>.item>a>img, .carousel-inner>.item>img {
+	    line-height: 1;
+	}
+	.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
+	    display: block;
+	    max-width: 100%;
+	    height: 100%;
+	}
+
+
+	.nav-gallery{
+		display:block;
+	}
+
+	.buttons{
+		display: none;
 	}
 
 	.fas, .fab{

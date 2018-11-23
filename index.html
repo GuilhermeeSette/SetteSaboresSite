@@ -31,7 +31,9 @@
         <div class="container">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"></button>
-            <a class="navbar-brand" href="#">Sette Sabores</a>
+            <a class="navbar-brand" href="#" >
+							<img class="logo" src="./imgs/Logotipo_SetteSaboresDoces.png" alt="">
+						</a>
           </div>
           <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
@@ -55,7 +57,7 @@
     </div>
   </div>
 	<div id="myCarousel" class="carousel slide" data-ride="carousel">
-		<img class="logo" src="./imgs/Logotipo_SetteSaboresDoces.png" alt="">
+
       <!-- Indicators -->
       <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class=""></li>
@@ -106,9 +108,9 @@
 
 	</div>
 
-	<div class="main">
+	<div class="main container-fluid">
 
-		<div class="about " id="about">
+		<div class="about row" id="about">
 			<h2>Breve história</h2>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -122,13 +124,36 @@
 			consequat.</p>
 		</div>
 
-		<div class="gallery" id="gallery">
+		<div class="gallery row" id="gallery">
 			<h2> Conheça nossos produtos</h2>
-            <div class="buttons">
+			<nav class="navbar navbar-default nav-gallery">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Produtos</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+							<li ><a id="bolo" href="#gallery">Bolos</a></li>
+              <li><a id="doce" href="#gallery">Doces</a></li>
+              <li><a id="ovos" href="#gallery">Ovos</a></li>
+							<li><a id="panetone" href="#gallery">Panetones</a></li>
+            </ul>
+
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+          <div class="buttons col-xs-11 col-sm-11 col-md-11 col-lg-11 col-xl-11">
             <button id="bolo" class="button-item">Bolos</button>
             <button id="doce" class="button-item">Doces</button>
             <button id="ovos" class="button-item">Ovos</button>
             <button id="panetone" class="button-item">Panetones</button>
+
         </div>
         <div class="bolos">
 			<div class="gallery-item">
@@ -247,25 +272,24 @@
 			</div>
 		</div>
 		</div>
-		<div class="services" id="services">
+		<div class="services row" id="services">
 			<div class="icon-services">
-				<ul>
-					<li>
-						<i class="fas fa-truck truck"></i>
-						<p>Realizamos entregas</p>
-					</li>
-					<li>
-						<i class="fas fa-edit"></i>
-						<p>Pedidos por encomenda</p>
-					</li>
-					<li>
-						<i class="fas fa-credit-card"></i>
-						<p>Todas formas de pagamento</p>
-					</li>
-				</ul>
+				<div class="col-lg-4 text-center">
+					<i class="fas fa-truck truck "></i>
+					<p>Realizamos entregas</p>
+				</div>
+				<div class="col-lg-4 text-center">
+					<i class="fas fa-edit"></i>
+					<p>Pedidos por encomenda</p>
+				</div>
+				<div class="col-lg-4 text-center">
+					<i class="fas fa-credit-card"></i>
+					<p>Todas formas de pagamento</p>
+				</div>
+
 			</div>
 		</div>
-		<div class="address">
+		<div class="address row">
 			<div id="googleMap"></div>
 			<div class="social-media">
 				<ul class="social-media-items">
@@ -281,7 +305,7 @@
 				</ul>
 			</div>
 		</div>
-		<div class="footer">
+		<div class="footer row">
 			<p>Sette Sabores | © 2018 - Todos os direitos reservados - Desenvolvido por Sette Sabores</p>
 		</div>
 	</div>
