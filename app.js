@@ -21,14 +21,14 @@ $(document).ready(function(){
 		$(".doces").hide(0);
 		$(".ovos").hide(0);
 		$(".panetones").hide(0);
-	
-	$("#bolo").click(function(){
+
+	$("#bolos").click(function(){
 		$(".bolos").show(1000);
 		$(".doces").hide(1000);
 		$(".ovos").hide(1000);
 		$(".panetones").hide(1000);
 	});
-	$("#doce").click(function(){
+	$("#doces").click(function(){
 		$(".doces").show(1000);
 		$(".bolos").hide(1000);
 		$(".ovos").hide(1000);
@@ -42,10 +42,37 @@ $(document).ready(function(){
 		$(".panetones").hide(1000);
 	});
 
-	$("#panetone").click(function(){
+	$("#panetones").click(function(){
 		$(".panetones").show(1000);
 		$(".bolos").hide(1000);
 		$(".ovos").hide(1000);
 		$(".doces").hide(1000);
 	});
+
+  $("#bolo").click(function(){
+    $(".bolos").show(1000);
+    $(".doces").hide(1000);
+    $(".ovos").hide(1000);
+    $(".panetones").hide(1000);
+  });
+  $("#doce").click(function(){
+    $(".doces").show(1000);
+    $(".bolos").hide(1000);
+    $(".ovos").hide(1000);
+    $(".panetones").hide(1000);
+  });
+
+  $("#ovo").click(function(){
+    $(".ovos").show(1000);
+    $(".bolos").hide(1000);
+    $(".doces").hide(1000);
+    $(".panetones").hide(1000);
+  });
+
+  $("#panetone").click(function(){
+    $(".panetones").show(1000);
+    $(".bolos").hide(1000);
+    $(".ovos").hide(1000);
+    $(".doces").hide(1000);
+  });
 });
