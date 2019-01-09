@@ -3,116 +3,124 @@
 <head>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 	<link rel="stylesheet"
-				 href="https://fonts.googleapis.com/css?family=Pattaya">
+	href="https://fonts.googleapis.com/css?family=Pattaya">
 	<title>Sette Sabores</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="./style.css">
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<link rel="stylesheet" href="./style.css">
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-
-    <link rel="stylesheet" href="./style.css">
-
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-	<script type="text/javascript" src="./app.js"></script>
-
+	<script>
+	$(document).ready(function() {
+		var $lightbox = $('#lightbox');
+		$('[data-target="#lightbox"]').on('click', function(event) {
+			var $img = $(this).find('img'),
+			src = $img.attr('src'),
+			alt = $img.attr('alt'),
+			css = {
+				'maxWidth': $(window).width() - 50,
+				'maxHeight': $(window).height() - 50,
+			};
+			$lightbox.find('img').attr('src', src);
+			$lightbox.find('img').attr('alt', alt);
+			$lightbox.find('img').css(css);
+		});
+		$lightbox.on('shown.bs.modal', function (e) {
+			var $img = $lightbox.find('img');
+			$lightbox.find('.modal-dialog').css({'width': $img.width()});
+			$lightbox.find('.close').removeClass('hidden');
+		});
+	});
+</script>
+<script type="text/javascript" src="./app.js"></script>
 </head>
 <body>
-
 	<div class="navbar-wrapper">
-    <div class="container">
-      <nav id = "header" class="navbar navbar-inverse navbar-static-top" style="background-color: #ffcccb;">
-        <div class="container">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"></button>
-            <a class="navbar-brand" href="#" >
+		<div class="container">
+			<nav id = "header" class="navbar navbar-inverse navbar-static-top" style="background-color: #ffcccb;">
+				<div class="container">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"></button>
+						<a class="navbar-brand" href="#" >
 							<img class="logo" src="./imgs/Logotipo_SetteSaboresDoces.png" alt="">
 						</a>
-          </div>
-          <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-              <li class="active">
-                <a href="#">Home</a>
-              </li>
-              <li>
-                <a href="#about">Sobre</a>
-              </li>
-              <li>
-                <a href="#gallery">Produtos</a>
-              </li>
+					</div>
+					<div class="navbar-collapse collapse">
+						<ul class="nav navbar-nav">
+							<li class="active">
+								<a href="#">Home</a>
+							</li>
 							<li>
-                <a href="#services">Serviços</a>
-              </li>
-
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </div>
-  </div>
-	<div id="myCarousel" class="carousel slide" data-ride="carousel">
-
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class=""></li>
-        <li data-target="#myCarousel" data-slide-to="1" class=""></li>
-        <li data-target="#myCarousel" data-slide-to="2" class="active"></li>
-      </ol>
-      <div class="carousel-inner" role="listbox">
-        <div class="item">
-          <img class="first-slide" src="./imgs/d1.jpg" alt="First slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Example headline.</h1>
-              <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
-              <p><a class="download" href="./imgs/lista.jpg" target="_blank" role="button">Lista de preços</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <img class="second-slide" src="./imgs/d2.jpg" alt="Second slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Another example headline.</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p><a class="download" href="./imgs/lista.jpg" target="_blank" role="button" target="_blank">Lista de preços</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="item active">
-          <img class="third-slide" src="./imgs/d3.jpg"  alt="Third slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>One more for good measure.</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p><a class="download" href="./imgs/lista.jpg" target="_blank" role="button">Lista de preços</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div>
-
+								<a href="#about">Sobre</a>
+							</li>
+							<li>
+								<a href="#gallery">Produtos</a>
+							</li>
+							<li>
+								<a href="#services">Serviços</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>
 	</div>
+	<div class="carousel fade-carousel slide" data-ride="carousel" data-interval="4000" id="bs-carousel">
+		<!-- Overlay -->
+		<div class="overlay"></div>
+		<!-- Indicators -->
+		<ol class="carousel-indicators">
+			<li data-target="#bs-carousel" data-slide-to="0" class="active"></li>
+			<li data-target="#bs-carousel" data-slide-to="1"></li>
+			<li data-target="#bs-carousel" data-slide-to="2"></li>
+		</ol>
+		<!-- Wrapper for slides -->
+		<div class="carousel-inner">
+			<div class="item slides active">
+				<div class="slide-1"></div>
+				<div class="hero">
+					<hgroup>
+						<h1>We are creative</h1>
+						<h3>Get start your next awesome project</h3>
+					</hgroup>
 
-	<div class="main container-fluid">
+				</div>
+			</div>
+			<div class="item slides">
+				<div class="slide-2"></div>
+				<div class="hero">
+					<hgroup>
+						<h1>We are smart</h1>
+						<h3>Get start your next awesome project</h3>
+					</hgroup>
 
-		<div class="about row" id="about">
-			<h2>Breve história</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				</div>
+			</div>
+			<div class="item slides">
+				<div class="slide-3"></div>
+				<div class="hero">
+					<hgroup>
+						<h1>We are amazing</h1>
+						<h3>Get start your next awesome project</h3>
+					</hgroup>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="main container-fluid">
+	<div class="about row" id="about">
+		<h2>Breve história</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
@@ -123,154 +131,440 @@
 			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 			consequat.</p>
 		</div>
-
 		<div class="gallery row" id="gallery">
 			<h2> Conheça nossos produtos</h2>
 			<nav class="navbar navbar-default nav-gallery">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">Produtos</a>
-          </div>
-          <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="#">Produtos</a>
+					</div>
+					<div id="navbar" class="navbar-collapse collapse">
+						<ul class="nav navbar-nav">
 							<li ><a id="bolo" href="#gallery">Bolos</a></li>
-              <li><a id="doce" href="#gallery">Doces</a></li>
-              <li><a id="ovo" href="#gallery">Ovos</a></li>
+							<li><a id="doce" href="#gallery">Doces</a></li>
+							<li><a id="ovo" href="#gallery">Ovos</a></li>
 							<li><a id="panetone" href="#gallery">Panetones</a></li>
-            </ul>
+						</ul>
+					</div><!--/.nav-collapse -->
+				</div><!--/.container-fluid -->
+			</nav>
+			<div class="buttons col-xs-11 col-sm-11 col-md-11 col-lg-11 col-xl-11">
+				<button id="bolos" class="button-item">Bolos</button>
+				<button id="doces" class="button-item">Doces</button>
+				<button id="ovos" class="button-item">Ovos</button>
+				<button id="panetones" class="button-item">Panetones</button>
+			</div>
+			<div class="bolos">
+				<div class="container mt100">
+					<section class="row">
+						<div class="col-lg-3 col-sm-4 col-xs-12 image-holder">
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<a href="#" class="zoom" data-toggle="modal" data-target="#lightbox">
+										<img src="./imgs/Bolo/1.jpg" alt="...">
+										<span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-sm-4 col-xs-12 image-holder">
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<a href="#" class="zoom" data-toggle="modal" data-target="#lightbox">
+										<img src="./imgs/Bolo/2.jpg" alt="...">
+										<span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-sm-4 col-xs-12 image-holder">
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<a href="#" class="zoom" data-toggle="modal" data-target="#lightbox">
+										<img src="./imgs/Bolo/3.jpg" alt="...">
+										<span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-sm-4 col-xs-12 image-holder">
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<a href="#" class="zoom" data-toggle="modal" data-target="#lightbox">
+										<img src="./imgs/Bolo/4.jpg" alt="...">
+										<span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-sm-4 col-xs-12 image-holder">
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<a href="#" class="zoom" data-toggle="modal" data-target="#lightbox">
+										<img src="./imgs/Bolo/5.jpg" alt="...">
+										<span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-sm-4 col-xs-12 image-holder">
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<a href="#" class="zoom" data-toggle="modal" data-target="#lightbox">
+										<img src="./imgs/Bolo/6.jpg" alt="...">
+										<span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-sm-4 col-xs-12 image-holder">
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<a href="#" class="zoom" data-toggle="modal" data-target="#lightbox">
+										<img src="./imgs/Bolo/7.jpg" alt="...">
+										<span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-sm-4 col-xs-12 image-holder">
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<a href="#" class="zoom" data-toggle="modal" data-target="#lightbox">
+										<img src="./imgs/Bolo/8.jpg"/>
+										<span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-sm-4 col-xs-12 image-holder">
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<a href="#" class="zoom" data-toggle="modal" data-target="#lightbox">
+										<img src="./imgs/Bolo/8.jpg"/>
+										<span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<!-- Modal -->
 
-          </div><!--/.nav-collapse -->
-        </div><!--/.container-fluid -->
-      </nav>
-          <div class="buttons col-xs-11 col-sm-11 col-md-11 col-lg-11 col-xl-11">
-            <button id="bolos" class="button-item">Bolos</button>
-            <button id="doces" class="button-item">Doces</button>
-            <button id="ovos" class="button-item">Ovos</button>
-            <button id="panetones" class="button-item">Panetones</button>
+					</section> <!-- closing section -->
+				</div> <!-- closing div container -->
+			</div>
+			<div class="doces" >
+				<div class="container mt100">
+					<section class="row">
+						<div class="col-lg-3 col-sm-4 col-xs-12 image-holder">
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<a href="#" class="zoom" data-toggle="modal" data-target="#lightbox">
+										<img src="./imgs/Bolo/1.jpg" alt="...">
+										<span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-sm-4 col-xs-12 image-holder">
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<a href="#" class="zoom" data-toggle="modal" data-target="#lightbox">
+										<img src="./imgs/Bolo/2.jpg" alt="...">
+										<span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-sm-4 col-xs-12 image-holder">
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<a href="#" class="zoom" data-toggle="modal" data-target="#lightbox">
+										<img src="./imgs/Bolo/3.jpg" alt="...">
+										<span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-sm-4 col-xs-12 image-holder">
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<a href="#" class="zoom" data-toggle="modal" data-target="#lightbox">
+										<img src="./imgs/Bolo/4.jpg" alt="...">
+										<span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-sm-4 col-xs-12 image-holder">
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<a href="#" class="zoom" data-toggle="modal" data-target="#lightbox">
+										<img src="./imgs/Bolo/5.jpg" alt="...">
+										<span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-sm-4 col-xs-12 image-holder">
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<a href="#" class="zoom" data-toggle="modal" data-target="#lightbox">
+										<img src="./imgs/Bolo/6.jpg" alt="...">
+										<span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-sm-4 col-xs-12 image-holder">
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<a href="#" class="zoom" data-toggle="modal" data-target="#lightbox">
+										<img src="./imgs/Bolo/7.jpg" alt="...">
+										<span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-sm-4 col-xs-12 image-holder">
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<a href="#" class="zoom" data-toggle="modal" data-target="#lightbox">
+										<img src="./imgs/Bolo/8.jpg"/>
+										<span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-sm-4 col-xs-12 image-holder">
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<a href="#" class="zoom" data-toggle="modal" data-target="#lightbox">
+										<img src="./imgs/Bolo/8.jpg"/>
+										<span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<!-- Modal -->
 
-        </div>
-        <div class="bolos">
-			<div class="gallery-item">
-				<img src="./imgs/Bolo/1.jpg">
+					</section> <!-- closing section -->
+				</div>
 			</div>
-			<div class="gallery-item">
-				<img clas = "image-item" src="./imgs/Bolo/2.jpg">
+			<div class="ovos">
+				<div class="container mt100">
+					<section class="row">
+						<div class="col-lg-3 col-sm-4 col-xs-12 image-holder">
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<a href="#" class="zoom" data-toggle="modal" data-target="#lightbox">
+										<img src="./imgs/Ovo/1.jpg" alt="...">
+										<span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-sm-4 col-xs-12 image-holder">
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<a href="#" class="zoom" data-toggle="modal" data-target="#lightbox">
+										<img src="./imgs/Ovo/1.jpg" alt="...">
+										<span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-sm-4 col-xs-12 image-holder">
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<a href="#" class="zoom" data-toggle="modal" data-target="#lightbox">
+										<img src="./imgs/Ovo/6.jpg" alt="...">
+										<span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-sm-4 col-xs-12 image-holder">
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<a href="#" class="zoom" data-toggle="modal" data-target="#lightbox">
+										<img src="./imgs/Ovo/7.jpg" alt="...">
+										<span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-sm-4 col-xs-12 image-holder">
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<a href="#" class="zoom" data-toggle="modal" data-target="#lightbox">
+										<img src="./imgs/Ovo/8.jpg" alt="...">
+										<span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-sm-4 col-xs-12 image-holder">
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<a href="#" class="zoom" data-toggle="modal" data-target="#lightbox">
+										<img src="./imgs/Ovo/9.jpg" alt="...">
+										<span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-sm-4 col-xs-12 image-holder">
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<a href="#" class="zoom" data-toggle="modal" data-target="#lightbox">
+										<img src="./imgs/Ovo/10.jpg" alt="...">
+										<span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-sm-4 col-xs-12 image-holder">
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<a href="#" class="zoom" data-toggle="modal" data-target="#lightbox">
+										<img src="./imgs/Ovo/11.jpg"/>
+										<span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-sm-4 col-xs-12 image-holder">
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<a href="#" class="zoom" data-toggle="modal" data-target="#lightbox">
+										<img src="./imgs/Ovo/12.jpg"/>
+										<span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<!-- Modal -->
+
+					</section> <!-- closing section -->
+				</div>
 			</div>
-			<div class="gallery-item">
-				<img src="./imgs/Bolo/3.jpg">
+			<div class="panetones">
+				<div class="container mt100">
+					<section class="row">
+						<div class="col-lg-3 col-sm-4 col-xs-12 image-holder">
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<a href="#" class="zoom" data-toggle="modal" data-target="#lightbox">
+										<img src="./imgs/Ovo/1.jpg" alt="...">
+										<span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-sm-4 col-xs-12 image-holder">
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<a href="#" class="zoom" data-toggle="modal" data-target="#lightbox">
+										<img src="./imgs/Ovo/1.jpg" alt="...">
+										<span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-sm-4 col-xs-12 image-holder">
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<a href="#" class="zoom" data-toggle="modal" data-target="#lightbox">
+										<img src="./imgs/Ovo/6.jpg" alt="...">
+										<span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-sm-4 col-xs-12 image-holder">
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<a href="#" class="zoom" data-toggle="modal" data-target="#lightbox">
+										<img src="./imgs/Ovo/7.jpg" alt="...">
+										<span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-sm-4 col-xs-12 image-holder">
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<a href="#" class="zoom" data-toggle="modal" data-target="#lightbox">
+										<img src="./imgs/Ovo/8.jpg" alt="...">
+										<span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-sm-4 col-xs-12 image-holder">
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<a href="#" class="zoom" data-toggle="modal" data-target="#lightbox">
+										<img src="./imgs/Ovo/9.jpg" alt="...">
+										<span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-sm-4 col-xs-12 image-holder">
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<a href="#" class="zoom" data-toggle="modal" data-target="#lightbox">
+										<img src="./imgs/Ovo/10.jpg" alt="...">
+										<span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-sm-4 col-xs-12 image-holder">
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<a href="#" class="zoom" data-toggle="modal" data-target="#lightbox">
+										<img src="./imgs/Ovo/11.jpg"/>
+										<span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-sm-4 col-xs-12 image-holder">
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<a href="#" class="zoom" data-toggle="modal" data-target="#lightbox">
+										<img src="./imgs/Ovo/12.jpg"/>
+										<span class="overlay"><i class="glyphicon glyphicon-fullscreen"></i></span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<!-- Modal -->
+
+					</section> <!-- closing section -->
+				</div>
 			</div>
-			<div class="gallery-item">
-				<img src="./imgs/Bolo/4.jpg">
+			<div id="lightbox" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title" id="myModalLabel-doce">Sette Sabores - Produtos</h4>
+						</div>
+						<div class="modal-body">
+							<img src="" alt="" />
+						</div>
+					</div>
+				</div>
 			</div>
-			<div class="gallery-item">
-				<img src="./imgs/Bolo/5.jpg">
-			</div>
-			<div class="gallery-item">
-				<img src="./imgs/Bolo/6.jpg">
-			</div>
-			<div class="gallery-item">
-				<img src="./imgs/Bolo/7.jpg">
-			</div>
-			<div class="gallery-item">
-				<img src="./imgs/Bolo/8.jpg">
-			</div>
-			<div class="gallery-item">
-				<img src="./imgs/Bolo/8.jpg">
-			</div>
-		</div>
-		<div class="doces" >
-			<div class="gallery-item">
-				<img src="./imgs/Panetone/1.jpg">
-			</div>
-			<div class="gallery-item">
-				<img clas = "image-item" src="./imgs/Panetone/2.jpg">
-			</div>
-			<div class="gallery-item">
-				<img src="./imgs/Panetone/3.jpg">
-			</div>
-			<div class="gallery-item">
-				<img src="./imgs/Panetone/4.jpg">
-			</div>
-			<div class="gallery-item">
-				<img src="./imgs/Panetone/1.jpg">
-			</div>
-			<div class="gallery-item">
-				<img src="./imgs/Panetone/1.jpg">
-			</div>
-			<div class="gallery-item">
-				<img src="./imgs/Panetone/1.jpg">
-			</div>
-			<div class="gallery-item">
-				<img src="./imgs/Panetone/1.jpg">
-			</div>
-			<div class="gallery-item">
-				<img src="./imgs/Panetone/1.jpg">
-			</div>
-		</div>
-		<div class="ovos">
-			<div class="gallery-item">
-				<img src="./imgs/Ovo/1.jpg">
-			</div>
-			<div class="gallery-item">
-				<img clas = "image-item" src="./imgs/Ovo/1.jpg">
-			</div>
-			<div class="gallery-item">
-				<img src="./imgs/Ovo/6.jpg">
-			</div>
-			<div class="gallery-item">
-				<img src="./imgs/Ovo/7.jpg">
-			</div>
-			<div class="gallery-item">
-				<img src="./imgs/Ovo/8.jpg">
-			</div>
-			<div class="gallery-item">
-				<img src="./imgs/Ovo/9.jpg">
-			</div>
-			<div class="gallery-item">
-				<img src="./imgs/Ovo/10.jpg">
-			</div>
-			<div class="gallery-item">
-				<img src="./imgs/Ovo/11.jpg">
-			</div>
-			<div class="gallery-item">
-				<img src="./imgs/Ovo/12.jpg">
-			</div>
-		</div>
-		<div class="panetones">
-			<div class="gallery-item">
-				<img src="./imgs/Panetone/1.jpg">
-			</div>
-			<div class="gallery-item">
-				<img clas = "image-item" src="./imgs/Panetone/1.jpg">
-			</div>
-			<div class="gallery-item">
-				<img src="./imgs/Panetone/1.jpg">
-			</div>
-			<div class="gallery-item">
-				<img src="./imgs/Panetone/1.jpg">
-			</div>
-			<div class="gallery-item">
-				<img src="./imgs/Panetone/1.jpg">
-			</div>
-			<div class="gallery-item">
-				<img src="./imgs/Panetone/1.jpg">
-			</div>
-			<div class="gallery-item">
-				<img src="./imgs/Panetone/1.jpg">
-			</div>
-			<div class="gallery-item">
-				<img src="./imgs/Panetone/1.jpg">
-			</div>
-			<div class="gallery-item">
-				<img src="./imgs/Panetone/1.jpg">
-			</div>
-		</div>
 		</div>
 		<div class="services row" id="services">
 			<div class="icon-services">
@@ -286,7 +580,6 @@
 					<i class="fas fa-credit-card"></i>
 					<p>Todas formas de pagamento</p>
 				</div>
-
 			</div>
 		</div>
 		<div class="address row">
@@ -310,7 +603,6 @@
 		</div>
 	</div>
 	<a class= "link-icon" href="#header"><i class="fas fa-chevron-circle-up"></i></a>
-
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMjGwFi8iC9uO6_7v1OrU7KxFfWl5RyzU&callback=myMap"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMjGwFi8iC9uO6_7v1OrU7KxFfWl5RyzU&callback=myMap"></script>
 </body>
 </html>
