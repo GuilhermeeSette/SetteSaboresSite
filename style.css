@@ -1,10 +1,11 @@
 @import "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700";
 *{
-	font-family: "Pattaya", Arial, Verdana;
+  font-family: "Pattaya", Arial, Verdana;
 }
 
 
 html, body{
+  background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
 	height: 100%;
 	width: 99.8%;
 }
@@ -83,7 +84,6 @@ html{
     width: 100%;
     height: 100%;
     z-index: 2;
-    background-color: #080d15;
     opacity: .7;
 }
 
@@ -113,10 +113,10 @@ html{
   background-repeat: no-repeat;
 }
 .fade-carousel .slides .slide-1 {
-  background-image: url('./imgs/d1.jpg');
+  background-image: url('./imgs/wallpaper_1.JPG');
 }
 .fade-carousel .slides .slide-2 {
-  background-image: url('./imgs/d2.jpg');
+  background-image: url('./imgs/wallpaper_3.JPG');
 }
 .fade-carousel .slides .slide-3 {
   background-image: url('./imgs/d3.jpg');
@@ -246,12 +246,30 @@ html{
     opacity: 0.7
 }
 
+.card{
+  border-radius: 2px;
+}
+
+.card-1 {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.card-1:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
 .about{
   line-height: 1.8;
 	text-align: justify;
-	border-radius: 2px;
 	font-size: 1.5em;
-	background-color: #FFABB8;
+  background-color: #ecfffd;
+}
+
+.about:hover{
+  box-shadow: 2px 2px 21px 13px rgba(194,184,194,1);
+
+
 }
 
 .about h2{
